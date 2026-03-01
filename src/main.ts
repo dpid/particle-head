@@ -9,7 +9,8 @@ async function init() {
   }
 
   const ctx = createScene(container);
-  const { points, material } = await createParticleSystem('/models/head.gltf');
+  const modelPath = `${import.meta.env.BASE_URL}models/head.gltf`;
+  const { points, material } = await createParticleSystem(modelPath);
 
   ctx.scene.add(points);
 
